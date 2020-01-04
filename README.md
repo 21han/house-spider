@@ -1,2 +1,3 @@
 # house-spider
-crawl Zillow and its competitors and build a valuation model
+
+for real-estate related analysis and visualization
