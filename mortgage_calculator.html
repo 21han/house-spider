@@ -13142,52 +13142,6 @@ div#notebook {
 <span class="s2">    flex-direction: row;</span>
 <span class="s2">}</span>
 <span class="s2">&quot;&quot;&quot;</span>
-
-<span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;style&gt;</span><span class="si">{}</span><span class="s1">&lt;/style&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">CSS</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<style>
-.output {
-    flex-direction: row;
-}
-</style>
-</div>
-
-</div>
-
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">highlight_max</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    highlight the maximum in a Series yellow.</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">is_max</span> <span class="o">=</span> <span class="n">s</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;background-color: yellow&#39;</span> <span class="k">if</span> <span class="n">v</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">is_max</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -13209,6 +13163,7 @@ div#notebook {
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
 
+<span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;style&gt;</span><span class="si">{}</span><span class="s1">&lt;/style&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">CSS</span><span class="p">))</span>
 
 <span class="k">def</span> <span class="nf">basic_report</span><span class="p">(</span>
     <span class="n">price</span><span class="p">,</span> 
@@ -13255,7 +13210,8 @@ div#notebook {
         <span class="n">expense_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
             <span class="s2">&quot;expense type&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Mortgage&quot;</span><span class="p">,</span> <span class="s2">&quot;Repair&quot;</span><span class="p">,</span> <span class="s2">&quot;Insurance&quot;</span><span class="p">,</span> <span class="s2">&quot;Property tax&quot;</span><span class="p">,</span> <span class="s2">&quot;Vacancy&quot;</span><span class="p">,</span> <span class="s2">&quot;Property Managment&quot;</span><span class="p">,</span> <span class="s2">&quot;(Total)&quot;</span><span class="p">],</span>
             <span class="s2">&quot;amount&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">dollar</span><span class="p">(</span><span class="n">mortgage</span><span class="p">),</span> <span class="n">dollar</span><span class="p">(</span><span class="n">repair</span><span class="p">),</span> <span class="n">dollar</span><span class="p">(</span><span class="n">insurance</span><span class="p">),</span> 
-                            <span class="n">dollar</span><span class="p">(</span><span class="n">property_tax</span><span class="p">),</span> <span class="n">dollar</span><span class="p">(</span><span class="n">vacancy</span><span class="p">),</span> <span class="n">dollar</span><span class="p">(</span><span class="n">property_management</span><span class="p">),</span>
+
+                        <span class="n">dollar</span><span class="p">(</span><span class="n">property_tax</span><span class="p">),</span> <span class="n">dollar</span><span class="p">(</span><span class="n">vacancy</span><span class="p">),</span> <span class="n">dollar</span><span class="p">(</span><span class="n">property_management</span><span class="p">),</span>
                             <span class="n">dollar</span><span class="p">(</span><span class="n">estimated_monthly_expense</span><span class="p">)]</span>
         <span class="p">})</span>
         <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">expense_table</span><span class="o">.</span><span class="n">to_html</span><span class="p">()))</span>
@@ -13294,9 +13250,7 @@ div#notebook {
     <span class="n">repair</span> <span class="o">=</span> <span class="s2">&quot;50000&quot;</span><span class="p">,</span>
     <span class="n">unit_income</span> <span class="o">=</span> <span class="s2">&quot;2500&quot;</span><span class="p">,</span>
     <span class="n">insurance</span> <span class="o">=</span> <span class="s2">&quot;500&quot;</span><span class="p">,</span>
-    <span class="n">property_tax</span> <span class="o">=</span> <span class="s2">&quot;400&quot;</span><span class="p">,</span>
-    <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of times each strategy wins&#39;</span><span class="p">},)</span>
+    <span class="n">property_tax</span> <span class="o">=</span> <span class="s2">&quot;400&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
