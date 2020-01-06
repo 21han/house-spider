@@ -13301,69 +13301,6 @@ div#notebook {
 </div>
 
   </div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># df_test = pd.DataFrame({&#39;mass&#39;: [repair, closing_cost, pre_rent_holding_cost]},</span>
-<span class="c1">#                         index=[&#39;repair&#39;, &#39;closing_cost&#39;, &#39;pre_rent_holding&#39;])</span>
-<span class="c1"># _ = df_test.plot.pie(y=&#39;mass&#39;, figsize=(7, 7))</span>
-
-<span class="c1"># def from_web_page_to_loads():</span>
-<span class="c1">#     s = &quot;&quot;&quot;2020	$26,767.73	$60,312.79	$87,080.52	$1,493,232.27</span>
-<span class="c1">#     2021	$27,858.29	$59,222.23	$87,080.52	$1,465,373.98</span>
-<span class="c1">#     2022	$28,993.28	$58,087.24	$87,080.52	$1,436,380.70</span>
-<span class="c1">#     2023	$30,174.49	$56,906.03	$87,080.52	$1,406,206.21</span>
-<span class="c1">#     2024	$31,403.87	$55,676.65	$87,080.52	$1,374,802.34</span>
-<span class="c1">#     2025	$32,683.30	$54,397.22	$87,080.52	$1,342,119.04</span>
-<span class="c1">#     2026	$34,014.86	$53,065.66	$87,080.52	$1,308,104.18</span>
-<span class="c1">#     2027	$35,400.67	$51,679.85	$87,080.52	$1,272,703.51</span>
-<span class="c1">#     2028	$36,842.95	$50,237.57	$87,080.52	$1,235,860.56</span>
-<span class="c1">#     2029	$38,343.98	$48,736.54	$87,080.52	$1,197,516.58</span>
-<span class="c1">#     2030	$39,906.20	$47,174.32	$87,080.52	$1,157,610.38</span>
-<span class="c1">#     2031	$41,532.04	$45,548.48	$87,080.52	$1,116,078.34&quot;&quot;&quot;</span>
-<span class="c1">#     return [int(float(i.split(&quot;\t&quot;)[-1].replace(&quot;$&quot;, &quot;&quot;).replace(&quot;,&quot;, &quot;&quot;))) for i in s.split(&quot;\n&quot;)]</span>
-
-<span class="c1"># values = []</span>
-<span class="c1"># for i in range(1, 11):</span>
-<span class="c1">#     price = int(purchase_price * annual_rate ** i) </span>
-<span class="c1">#     # print(f&quot;year: {i} price : {&#39;${:,.2f}&#39;.format(price)}&quot;)</span>
-<span class="c1">#     price_after_forced_appreciation = price * 1.1</span>
-<span class="c1">#     print(f&quot;year: {i} price : {&#39;${:,.2f}&#39;.format(price_after_forced_appreciation)}&quot;)    </span>
-<span class="c1">#     values.append(price_after_forced_appreciation)</span>
-
-<span class="c1"># count = 0</span>
-<span class="c1"># sales_expenses = []</span>
-<span class="c1"># for property_value in values:</span>
-<span class="c1">#     total_sales_expense = property_value * 6/100</span>
-<span class="c1">#     print(f&quot;selling after {count} years&quot;, &#39;${:,.2f}&#39;.format(total_sales_expense))</span>
-<span class="c1">#     count += 1</span>
-<span class="c1">#     sales_expenses.append(total_sales_expense)</span>
-
-<span class="c1"># for i in range(10):</span>
-<span class="c1">#     print(f&quot;year afterwards: {i} year&quot;)</span>
-<span class="c1">#     print(f&quot;value: {dollar(values[i])}, \</span>
-<span class="c1">#           sales expense : {dollar(sales_expenses[i])}, \</span>
-<span class="c1">#           loan : {dollar(loans_year_after_year[i])}&quot;)</span>
-<span class="c1">#     appreciation_profit = values[i] - sales_expenses[i] - loans_year_after_year[i] - total_cash_needed</span>
-<span class="c1">#     print(f&quot;appreciation_profit: {dollar(appreciation_profit)}&quot;)</span>
-<span class="c1">#     cash_flow = monthly_cash_flow * 12 * (i + 1)</span>
-<span class="c1">#     print(f&quot;total cash flow {dollar(cash_flow)}&quot;)</span>
-<span class="c1">#     total_profit = appreciation_profit + cash_flow</span>
-<span class="c1">#     print(f&quot;total profit {dollar(total_profit)}&quot;)</span>
-<span class="c1">#     print(&quot;\n&quot;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <!-- ### Monthly Mortgage Payment Formula
