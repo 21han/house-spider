@@ -13214,6 +13214,7 @@ div#notebook {
     <span class="n">price</span><span class="p">,</span> 
     <span class="n">down</span><span class="p">,</span> 
     <span class="n">closing_cost</span><span class="o">=</span><span class="mi">42830</span><span class="p">,</span>
+    <span class="n">mortgage</span> <span class="o">=</span> <span class="mi">7000</span><span class="p">,</span>
     <span class="n">loan_term</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
     <span class="n">num_units</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
     <span class="n">unit_income</span><span class="o">=</span><span class="mi">2500</span><span class="p">,</span>
@@ -13234,7 +13235,8 @@ div#notebook {
     <span class="n">property_management_rate</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">100</span>
     
     <span class="n">mortgage_rate</span> <span class="o">=</span> <span class="mf">3.24</span><span class="o">/</span><span class="mi">100</span> <span class="k">if</span> <span class="n">loan_term</span> <span class="o">==</span> <span class="mi">15</span> <span class="k">else</span> <span class="mf">4.0</span><span class="o">/</span><span class="mi">100</span>
-    <span class="n">mortgage</span> <span class="o">=</span> <span class="n">monthly_payment</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">interest</span><span class="o">=</span><span class="n">mortgage_rate</span><span class="p">,</span> <span class="n">loan_months</span><span class="o">=</span><span class="n">loan_term</span><span class="o">*</span><span class="mi">12</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">mortgage</span><span class="p">:</span>
+        <span class="n">mortgage</span> <span class="o">=</span> <span class="n">monthly_payment</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">interest</span><span class="o">=</span><span class="n">mortgage_rate</span><span class="p">,</span> <span class="n">loan_months</span><span class="o">=</span><span class="n">loan_term</span><span class="o">*</span><span class="mi">12</span><span class="p">)</span>
     <span class="n">down_payments</span><span class="p">,</span> <span class="n">loan</span> <span class="o">=</span> <span class="n">purchase_price</span> <span class="o">*</span> <span class="n">down_payment_rate</span><span class="p">,</span> <span class="n">purchase_price</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">down_payment_rate</span><span class="p">)</span>
     <span class="n">pre_rent_holding_cost</span> <span class="o">=</span> <span class="n">mortgage</span> <span class="o">*</span> <span class="mi">2</span>
 
